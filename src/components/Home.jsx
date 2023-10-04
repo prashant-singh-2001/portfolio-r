@@ -2,7 +2,6 @@ import React from "react";
 import PFPX from "../Assests/PFPX.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
-import ReactTyped from "react-typed";
 const Home = () => {
   return (
     <div
@@ -18,19 +17,7 @@ const Home = () => {
             I am an enthusiastic young man who is deeply passionate about the IT
             field.
           </p>
-          <ReactTyped
-            strings={[
-              "MERN STACK",
-              "JAVA FULL STACK",
-              "DATA ANALYST",
-              "LEETCODE #10K",
-              "HACKERRANK 5⭐",
-            ]}
-            typeSpeed={40}
-            backSpeed={40}
-            loop
-            className="font-semibold text-4xl text-white drop-shadow-sm shadow-slate-100 my-0 pt-0 pb-4"
-          ></ReactTyped>
+          
           <div>
             <Link
               to="portfolio"
