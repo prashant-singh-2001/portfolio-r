@@ -2,11 +2,12 @@ import React from "react";
 import PFPX from "../Assests/PFPX.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
+import ReactTyped from "react-typed";
 const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen min-h-screen w-full bg-gradient-to-b from-black to-gray-800 via-black"
+      className="h-96 py-20 sm:h-screen min-h-screen w-full bg-gradient-to-b from-black to-gray-800 via-black"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">
@@ -14,10 +15,22 @@ const Home = () => {
             Hey there!
           </h2>
           <p className="text-gray-400 pt-4 max-w-md text-2xl mb-0">
-            I am an enthusiastic young man who is deeply passionate about the IT
-            field.
+            A budding software developer with a burning passion for the world of
+            IT
           </p>
-          
+          <ReactTyped
+            strings={[
+              "MERN STACK",
+              "JAVA FULL STACK",
+              "DATA ANALYST",
+              "LEETCODE #10K",
+              "HACKERRANK 5⭐",
+            ]}
+            typeSpeed={40}
+            backSpeed={40}
+            loop
+            className="font-semibold text-4xl text-white drop-shadow-sm shadow-slate-100 my-0 pt-0 pb-4"
+          ></ReactTyped>
           <div>
             <Link
               to="portfolio"

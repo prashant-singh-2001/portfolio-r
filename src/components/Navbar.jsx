@@ -8,9 +8,10 @@ const Navbar = () => {
     { id: 3, link: "portfolio" },
     { id: 2, link: "skills" },
     { id: 4, link: "academics" },
-    { id: 5, link: "certificates" },
-    { id: 6, link: "others" },
-    { id: 7, link: "contact" },
+    { id: 5, link: "training" },
+    { id: 6, link: "certificates" },
+    { id: 9, link: "others" },
+    { id: 8, link: "contact" },
   ];
   const [nav, setNav] = useState(false);
   return (
@@ -39,10 +40,13 @@ const Navbar = () => {
         {!nav ? <FaBars size={30} /> : <FaTimes size={30} />}
       </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-200 md:text-gray-400">
           {links.map(({ link, id }) => {
             return (
-              <li className="px-4 cursor-pointer capitalize py-6" key={id}>
+              <li
+                className="px-4 cursor-pointer capitalize py-6 text-xl"
+                key={id}
+              >
                 <Link
                   onClick={() => setNav(!nav)}
                   to={link}
