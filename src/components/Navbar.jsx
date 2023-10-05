@@ -4,14 +4,13 @@ import { Link } from "react-scroll";
 const Navbar = () => {
   const links = [
     { id: 1, link: "home" },
-    { id: 7, link: "about" },
+    { id: 2, link: "about" },
     { id: 3, link: "portfolio" },
-    { id: 2, link: "skills" },
-    { id: 4, link: "academics" },
-    { id: 5, link: "training" },
-    { id: 6, link: "certificates" },
-    { id: 9, link: "others" },
-    { id: 8, link: "contact" },
+    { id: 4, link: "skills" },
+    { id: 5, link: "academics" },
+    { id: 7, link: "certificates" },
+    { id: 8, link: "others" },
+    { id: 9, link: "contact" },
   ];
   const [nav, setNav] = useState(false);
   return (
