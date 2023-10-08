@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Socials from "./components/Socials";
 import Academics from "./components/Academics";
+import Hobbies from "./components/Hobbies";
 import Certificates from "./components/Certificates";
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
     <div>
       <Navbar />
       <Home />
-      <About />
       <Portfolio />
       <Skills />
       <Academics />
-      <Certificates />
+      <Certificates/>
+      <Hobbies />
+      <About />
       <Contact />
       <Socials />
     </div>

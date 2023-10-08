@@ -1,311 +1,260 @@
-import React, { useState } from "react";
-import ReactCardFlip from "react-card-flip";
+import React from "react";
 import {
-  FaChevronUp,
-  FaSun,
-  FaBasketballBall,
-  FaVolleyballBall,
-  FaReadme,
-} from "react-icons/fa";
-import { FaPersonMilitaryRifle } from "react-icons/fa6";
-import { SiYoutubegaming } from "react-icons/si";
-import { PiCodesandboxLogoDuotone } from "react-icons/pi";
-import { TbTrekking } from "react-icons/tb";
-import { MdDisplaySettings } from "react-icons/md";
-import {
-  BsFillLightningChargeFill,
-  BsFillChatQuoteFill,
-  BsCommand,
-} from "react-icons/bs";
-import { RxMixerHorizontal } from "react-icons/rx";
-import Dance from "../Assests/HobbyIcon/Dance";
-import RacingTyre from "../Assests/HobbyIcon/RacingTyre";
+  TbFileTypeSql,
+  TbBulb,
+  TbBrandGoogleAnalytics,
+  TbBrandCSharp,
+  TbRobot,
+} from "react-icons/tb";
+import { GiProcessor } from "react-icons/gi";
+import { FaHackerrank, FaJava, FaPython, FaAws } from "react-icons/fa";
+import { SiCsharp, SiInfosys, SiTcs, SiWipro } from "react-icons/si";
+import { LiaNetworkWiredSolid } from "react-icons/lia";
+import { GrAnalytics } from "react-icons/gr";
 
 const Certificates = () => {
-  const [interestCards, setInteresCards] = useState([
+  const certs = [
     {
-      isFlipped: false,
       id: 1,
-      src: <FaBasketballBall size={40} />,
-      title: "Basketball",
-      style: "shadow-violet-500 bg-slate-300 text-black",
-    },
-
-    {
-      isFlipped: false,
-      id: 3,
-      src: <FaVolleyballBall size={40} />,
-      title: "Volleyball",
-      style: "shadow-sky-500",
+      title: "Google",
+      icon: (
+        <span className="flex">
+          <TbBrandGoogleAnalytics className="mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Google Analytics 4",
+      link: "https://drive.google.com/file/d/1upq1-NIvDeA6hrqnfyDkZXYaU4m8i6IN/view?usp=sharing",
     },
     {
-      isFlipped: false,
-      id: 4,
-      src: <Dance />,
-      title: "Dance",
-      style: "shadow-emerald-500 bg-slate-300 text-black",
-    },
-    {
-      isFlipped: false,
-      id: 5,
-      src: <FaReadme size={40} />,
-      title: "Reading",
-      style: "shadow-yellow-500",
-    },
-    {
-      isFlipped: false,
-      id: 6,
-      src: <TbTrekking size={40} />,
-      title: "Trekking",
-      style: "shadow-red-500 bg-slate-300 text-black",
-    },
-    {
-      isFlipped: false,
-      id: 7,
-      src: <SiYoutubegaming size={40} />,
-      title: "Gaming",
-      style: "shadow-fuchsia-500 ",
-    },
-  ]);
-
-  function flipIn(id) {
-    setInteresCards((prevFlipCards) =>
-      prevFlipCards.map((card) =>
-        card.id === id ? { ...card, isFlipped: !card.isFlipped } : card
-      )
-    );
-  }
-  const [flipCards, setFlipCards] = useState([
-    {
-      isFlipped: false,
-      id: 1,
-      src: <FaChevronUp size={40} />,
-      title: "Leadership",
-      style: "shadow-rose-500",
-    },
-    {
-      isFlipped: false,
       id: 2,
-      src: <RxMixerHorizontal size={40} />,
-      title: "Decision Making",
-      style: "shadow-purple-500",
+      title: "Celonis",
+      icon: (
+        <span className="flex">
+          <GiProcessor className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Rising Star Process Mining",
+      link: "https://www.credly.com/badges/695f9621-8bdf-4861-84ad-87f859ef297a/public_url",
     },
     {
-      isFlipped: false,
       id: 3,
-      src: <FaSun size={40} />,
-      title: "Problem Solver",
-      style: "shadow-blue-500",
+      title: "Infosys Springboard",
+      icon: (
+        <span className="flex">
+          <SiInfosys className=" ms-auto w-10 h-10 scale-125 text-gray-900" />
+          <FaJava className=" me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Java Developer",
+      link: "https://drive.google.com/file/d/1cufkPRsR5qlIQuCgAceiiKC4UEOd_1fM/view?usp=sharing",
     },
     {
-      isFlipped: false,
       id: 4,
-      src: <BsFillLightningChargeFill size={40} />,
-      title: "Critical Thinker",
-      style: "shadow-teal-500",
+      title: "AWS Academy",
+      icon: (
+        <span className="flex">
+          <FaAws className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "AWS Cloud Foudations",
+      link: "https://www.credly.com/badges/86f4f10e-6d3f-46e4-aad9-baa358136d68/public_url",
     },
     {
-      isFlipped: false,
       id: 5,
-      src: <BsFillChatQuoteFill size={40} />,
-      title: "Communication",
-      style: "shadow-lime-500 ",
+      title: "Wipro TalentNext",
+      icon: (
+        <span className="flex">
+          <SiWipro className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "J2EE Developer",
+      link: "https://drive.google.com/file/d/1gyw5x0M_Vfi6ukSEwka3wJYeUQVzvhtb/view?usp=sharing",
     },
     {
-      isFlipped: false,
       id: 6,
-      src: <BsCommand size={40} />,
-      title: "Team Spirit",
-      style: "shadow-orange-500",
+      title: "TCS iOn",
+      icon: (
+        <span className="flex">
+          <SiTcs className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Young Professional",
+      link: "https://drive.google.com/file/d/1njSXBQry9YqL0L8h-DFhkjZNY6oBkkwo/view?usp=sharing",
     },
     {
-      isFlipped: false,
       id: 7,
-      src: <PiCodesandboxLogoDuotone size={40} />,
-      title: "Adaptibility",
-      style: "shadow-pink-500 ",
+      title: "HackerRank",
+      icon: (
+        <span className="flex">
+          <FaHackerrank className=" ms-auto w-10 h-10 text-gray-900" />
+          <TbFileTypeSql className="me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "SQL Advanced",
+      link: "https://www.hackerrank.com/certificates/14efd2776e3a",
     },
-  ]);
-
-  function flipIt(id) {
-    setFlipCards((prevFlipCards) =>
-      prevFlipCards.map((card) =>
-        card.id === id ? { ...card, isFlipped: !card.isFlipped } : card
-      )
-    );
-  }
-
-  const [interest, setInterest] = useState([
     {
-      isFlipped: false,
+      id: 8,
+      title: "HackerRank",
+      icon: (
+        <span className="flex">
+          <FaHackerrank className=" ms-auto w-10 h-10 text-gray-900" />
+          <TbBulb className="me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Problem Solving Intermediate",
+      link: "https://www.hackerrank.com/certificates/a6d78ddad1b7",
+    },
+    {
+      id: 9,
+      title: "HackerRank",
+      icon: (
+        <span className="flex">
+          <FaHackerrank className=" ms-auto w-10 h-10 text-gray-900" />
+          <FaJava className="me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Java Basic",
+      link: "https://www.hackerrank.com/certificates/6a696c76cb23",
+    },
+    {
+      id: 10,
+      title: "HackerRank",
+      icon: (
+        <span className="flex">
+          <FaHackerrank className=" ms-auto w-10 h-10 text-gray-900" />
+          <SiCsharp className="me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "C# Basic",
+      link: "https://www.hackerrank.com/certificates/636ef4dd45c1",
+    },
+    {
+      id: 11,
+      title: "HackerRank",
+      icon: (
+        <span className="flex">
+          <FaHackerrank className=" ms-auto w-10 h-10 text-gray-900" />
+          <FaPython className="me-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Python Basic",
+      link: "https://www.hackerrank.com/certificates/403be5a0ce95",
+    },
+  ];
+  const courses = [
+    {
       id: 1,
-      src: <RacingTyre />,
-      title: "Automobiles",
-      style: "shadow-cyan-500 bg-slate-300 text-black",
+      title: "University of Helsinki",
+      icon: (
+        <span className="flex">
+          <TbRobot className="mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Elements of AI",
+      link: "https://drive.google.com/file/d/1NuVO2qrbc84azboKLzfIiZ1M_gz8tkfe/view?usp=sharing",
     },
     {
-      isFlipped: false,
       id: 2,
-      src: <FaPersonMilitaryRifle size={40} />,
-      title: "Military",
-      style: "shadow-amber-500 bg-slate-300 text-black",
+      title: "freeCodeCamp",
+      icon: (
+        <span className="flex">
+          <LiaNetworkWiredSolid className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Machine Learning With Python",
+      link: "https://www.credly.com/badges/695f9621-8bdf-4861-84ad-87f859ef297a/public_url",
     },
     {
-      isFlipped: false,
       id: 3,
-      src: <MdDisplaySettings size={40} />,
-      title: "Computers",
-      style: "shadow-stone-500 bg-slate-300 text-black",
+      title: "Udemy",
+      icon: (
+        <span className="flex">
+          <GrAnalytics className=" mx-auto w-10 h-10 scale-125 text-gray-900" />
+        </span>
+      ),
+      text: "Data Analytics With Python",
+      link: "https://drive.google.com/file/d/1y_6ohLPBoD1gwXFhiX9myXGcKlD24-48/view?usp=sharing",
     },
-  ]);
-
-  function flipInterest(id) {
-    setInterest((prevFlipCards) =>
-      prevFlipCards.map((card) =>
-        card.id === id ? { ...card, isFlipped: !card.isFlipped } : card
-      )
-    );
-  }
+    {
+      id: 4,
+      title: "Udemy",
+      icon: (
+        <span className="flex">
+          <TbBrandCSharp className=" mx-auto w-10 h-10 text-gray-900" />
+        </span>
+      ),
+      text: "Learn C# Coding Intermediate: C# Classes, Methods and OOPs",
+      link: "https://www.credly.com/badges/86f4f10e-6d3f-46e4-aad9-baa358136d68/public_url",
+    },
+  ];
   return (
     <div
-      name="hobbies"
-      className="w-full h-fit min-h-fit bg-gradient-to-b from-gray-800 to-black via-gray-900 text-white pt-20 md:pt-44"
+      name="certificates"
+      className="bg-gradient-to-b from-black to-gray-800 via-black w-full h-fit min-h-fit md:h-fit text-white pt-20 overflow-y-hidden"
     >
-      <div className="max-w-screen-lg  md:pt-0 p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-4 md:pd-8 text-center md:text-left ">
-          <p className="text-5xl py-1 font-bold inline border-b-4 border-gray-400">
-            Soft Skills
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-fit">
+        <div className="pb-4 md:pb-8 text-center md:text-left ">
+          <p className="text-3xl p-2 font-bold inline border-b-4 border-gray-500">
+            Certificates
           </p>
         </div>
-        <div className="p-4  w-full   grid grid-cols-2 md:grid-cols-4 gap-6 text-center py-8  px-12 sm:px-0">
-          {flipCards.map((e) => (
-            <ReactCardFlip
-              flipDirection="horizontal"
-              isFlipped={e.isFlipped}
-              key={e.id}
-            >
+        <div className="scrollable-container border border-gray-500 rounded-2xl">
+          <div className=" min-h-full h-96 flex  text-gray-900 gap-4">
+            {certs.map(({ id, title, icon, text, link }) => (
               <div
-                onMouseEnter={() => {
-                  flipIt(e.id);
-                }}
+                key={id}
+                class="w-fit min-h-fit flex flex-col items-center px-8 py-2  my-auto bg-gray-50 bg-opacity-95 rounded-md shadow-sm duration-300 shadow-fuchsia-50 hover:shadow-pink-600 hover:shadow-lg"
               >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg  " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5  text-xl font-medium">{e.title}</p>
-                </div>
+                <h3 className="text-center p-2 py-3 text-2xl font-semibold h-24 ">
+                  {icon}
+                  {title}
+                </h3>
+                <p className="p-4 font-semibold text-xl italic text-yellow-500 h-10">
+                  2021
+                </p>
+                <p className="py-6 font-semibold text-xl h-32  text-center">
+                  {text}
+                </p>
+                <p className="mx-8 p-2 font-medium border-spacing-1 border border-red-400 rounded-md duration-300 hover:bg-red-700 hover:border-gray-50 hover:text-gray-50  text-center">
+                  <a target="_blank" rel="noreferrer" href={link}>
+                    View Certificate
+                  </a>
+                </p>
               </div>
-              <div
-                onMouseLeave={() => {
-                  flipIt(e.id);
-                }}
-              >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5 text-xl font-medium ">{e.title}</p>
-                </div>
-              </div>
-            </ReactCardFlip>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="pb-4 md:pd-8 text-center md:text-left ">
-          <p className="text-3xl py-1 font-bold inline border-b-4 border-gray-400">
-            Hobbies
+        <div className=" mt-4 pb-4 md:pb-8 text-center md:text-left ">
+          <p className="text-3xl p-2 font-bold inline border-b-4 border-gray-500">
+            Courses
           </p>
         </div>
-        <div className="p-4  w-full grid grid-cols-2 md:grid-cols-6 gap-6 text-center py-8  px-12 sm:px-0">
-          {interestCards.map((e) => (
-            <ReactCardFlip
-              flipDirection="horizontal"
-              isFlipped={e.isFlipped}
-              key={e.id}
-            >
+        <div className="scrollable-container ">
+          <div className=" min-h-full h-96 flex  text-gray-900 gap-4">
+            {courses.map(({ id, title, icon, text, link }) => (
               <div
-                onMouseEnter={() => {
-                  flipIn(e.id);
-                }}
+                key={id}
+                class="w-fit min-h-fit flex flex-col items-center px-8 py-2  my-auto bg-gray-50 bg-opacity-95 rounded-md shadow-sm duration-300 shadow-fuchsia-50 hover:shadow-amber-600 hover:shadow-lg"
               >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5 text-xl">{e.title}</p>
-                </div>
+                <h3 className="text-center p-2 py-3 text-2xl font-semibold h-24 ">
+                  {icon}
+                  {title}
+                </h3>
+                <p className="p-4 font-semibold text-xl italic text-yellow-500 h-10">
+                  2021
+                </p>
+                <p className="py-6 font-semibold text-xl h-32  text-center">
+                  {text}
+                </p>
+                <p className="mx-8 p-2 font-medium border-spacing-1 border border-red-400 rounded-md duration-300 hover:bg-red-700 hover:border-gray-50 hover:text-gray-50  text-center">
+                  <a target="_blank" rel="noreferrer" href={link}>
+                    View Certificate
+                  </a>
+                </p>
               </div>
-              <div
-                onMouseLeave={() => {
-                  flipIn(e.id);
-                }}
-              >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5 text-xl">{e.title}</p>
-                </div>
-              </div>
-            </ReactCardFlip>
-          ))}
-        </div>
-        <div className="pb-4 md:pd-8 text-center md:text-left ">
-          <p className="text-3xl py-1 font-bold inline border-b-4 border-gray-400">
-            Interests
-          </p>
-        </div>
-        <div className="p-4  w-full grid grid-cols-2 md:grid-cols-6 gap-6 text-center py-8  px-12 sm:px-0">
-          {interest.map((e) => (
-            <ReactCardFlip
-              flipDirection="horizontal"
-              isFlipped={e.isFlipped}
-              key={e.id}
-            >
-              <div
-                onMouseEnter={() => {
-                  flipInterest(e.id);
-                }}
-              >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5 text-xl">{e.title}</p>
-                </div>
-              </div>
-              <div
-                onMouseLeave={() => {
-                  flipInterest(e.id);
-                }}
-              >
-                <div
-                  key={e.id}
-                  className={"shadow-md py-2 rounded-lg " + e.style}
-                >
-                  <div className="h-20 flex items-center justify-center overflow-hidden">
-                    {e.src}
-                  </div>
-                  <p className="pt-5 text-xl">{e.title}</p>
-                </div>
-              </div>
-            </ReactCardFlip>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

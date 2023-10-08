@@ -242,7 +242,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="bg-gradient-to-b from-gray-800 to-black via-slate-900 w-full h-fit pt-28"
+      className="bg-gradient-to-b from-gray-800 to-black via-slate-900 w-full h-fit min-h-fit pt-28"
     >
       <div className="max-w-screen-lg mx-auto  p-4 flex flex-col justify-center w-full h-full text-white">
         <div className="text-center md:text-left ">
@@ -267,7 +267,7 @@ const Skills = () => {
               >
                 <div
                   className={
-                    "shadow-md py-2 rounded-lg cursor-pointer " + e.style
+                    "shadow-md py-2 rounded-lg cursor-pointer h-40 " + e.style
                   }
                 >
                   <div className="h-20 flex items-center justify-center overflow-hidden">
@@ -287,7 +287,7 @@ const Skills = () => {
               >
                 <div
                   className={
-                    "shadow-md py-2 rounded-lg cursor-pointer " + e.style
+                    "shadow-md py-2 rounded-lg cursor-pointer h-40 " + e.style
                   }
                 >
                   <div className="p-1 h-20 flex items-center justify-center overflow-hidden">
